@@ -23,11 +23,13 @@ class ForkliftArticulation(Articulation):
                 prim_path: Sdf.Path = prim.GetPath()
                 if re.match(pattern, prim_path.pathString):
                     matching_prims.append(prim_path)
-
-        for prim in matching_prims:
+        
+        prims_per_env = 2
+        for idx, prim in enumerate(matching_prims):
+            env_idx = idx // prims_per_env
             contact_api: PhysxSchema.PhysxContactReportAPI = \
                 PhysxSchema.PhysxContactReportAPI.Get(stage, prim)
-            contact_api.CreateReportPairsRel().AddTarget("/World/envs/env_{ENV_REGEX_NS}/Pallet")
+            contact_api.CreateReportPairsRel().AddTarget(f"/World/envs/env_{env_idx}/Pallet")
 
 # reference
 class FrankaArticulation(Articulation):
