@@ -3,6 +3,8 @@ from __future__ import annotations
 import argparse
 import traceback
 from typing import TYPE_CHECKING
+import sys
+sys.path.append("/workspace/isaac_forklift")
 
 import carb
 import torch
@@ -37,6 +39,8 @@ from forklift_envs.assets.forklift_pallet_cfg import PALLET_CFG  # noqa: F401, E
 
 if TYPE_CHECKING:
     from forklift_envs.envs.local_navigation.utils.articulation.articulation import ForkliftArticulation
+    from forklift_envs.envs.local_navigation.utils.rigidobject.rigidobject import PalletRigidObject
+
 # Here we configure the environment
 
 
@@ -44,22 +48,37 @@ if TYPE_CHECKING:
 class ForkliftPalletSceneCfg(InteractiveSceneCfg):
     """ Configuration for the forklift and pallet scene """
 
-    # Add ground plane
+    # ✅ 클래스 속성 정의
     ground = AssetBaseCfg(prim_path="/World/defaultGroundPlane", spawn=sim_utils.GroundPlaneCfg())
 
-    # Add lightsss
     dome_light = AssetBaseCfg(
         prim_path="/World/Light",
         spawn=sim_utils.DomeLightCfg(intensity=3000.0, color=(0.75, 0.75, 0.75))
     )
 
-    # Add the forklift
     forklift: ArticulationCfg = FORKLIFT_CFG.replace(
-        prim_path="{ENV_REGEX_NS}/Forklift")
-    
-    # Add the pallet
-    pallet: ArticulationCfg = PALLET_CFG.replace(
-        prim_path="{ENV_REGEX_NS}/Pallet")
+        prim_path="{ENV_REGEX_NS}/Forklift"
+    )
+
+    pallet: RigidObjectCfg = PALLET_CFG.replace(
+        prim_path="{ENV_REGEX_NS}/Pallet"
+    )  # ✅ 클래스 속성으로 설정하여 초기화 문제 방지
+
+    def __init__(self, num_envs: int = 1, env_spacing: float = 2.0):
+        """✅ `self.pallet`을 인스턴스 속성으로 변환"""
+        super().__init__(num_envs=num_envs, env_spacing=env_spacing)
+
+        # ✅ 부모 클래스 초기화 후 인스턴스 속성으로 변환
+        self.env_name = f"/World/envs/env_{0}"
+
+        # ✅ self.pallet을 올바르게 설정
+        self.pallet = PALLET_CFG.replace(
+            prim_path=self.env_name + "/Pallet"
+        )
+
+        print(f"[DEBUG] Initialized pallet with prim_path: {self.pallet.prim_path}", flush=True)
+
+
 
 def setup_scene():
     """ Setup the scene """
@@ -74,6 +93,9 @@ def setup_scene():
     sim.set_camera_view([2.5, 0.0, 4.0], [0.0, 0.0, 2.0])
 
     scene_cfg = ForkliftPalletSceneCfg(num_envs=args_cli.num_envs, env_spacing=2.0)
+
+    print(f"[DEBUG] Pallet prim_path: {scene_cfg.pallet.prim_path}", flush=True)
+
     scene = InteractiveScene(scene_cfg)
 
     sim.reset()
@@ -111,7 +133,7 @@ def run_simulation(sim: sim_utils.SimulationContext, scene: InteractiveScene):
     count = 0
     num_envs = pallet.data.default_root_state.shape[0]  
 
-    def reset_scene(forklift: ForkliftArticulation, pallet: Articulation, scene: InteractiveScene):
+    def reset_scene(forklift: ForkliftArticulation, pallet: PalletRigidObject, scene: InteractiveScene):
         root_state = forklift.data.default_root_state.clone()
         root_state[:, :3] += scene.env_origins
         forklift.write_root_state_to_sim(root_state)
