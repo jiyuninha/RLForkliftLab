@@ -1,5 +1,5 @@
 # Copyright (c) 2025-2027, Inha University (SPARO Lab)
-# Author: Minho Lee
+# Author: Jiyun Lee
 # All rights reserved.
 #
 # SPDX-License-Identifier: BSD-3-Clause

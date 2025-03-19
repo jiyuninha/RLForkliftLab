@@ -1,5 +1,5 @@
 # Copyright (c) 2025-2027, Inha University (SPARO Lab)
-# Author: Minho Lee
+# Author: Jiyun Lee
 # All rights reserved.
 #
 # SPDX-License-Identifier: BSD-3-Clause
@@ -34,8 +34,11 @@ simulation_app = app_launcher.app
 import io
 import os
 import torch
+import re
 
 import omni
+from pxr import PhysxSchema, Sdf, Usd, UsdGeom
+
 
 # from isaaclab.envs import ManagerBasedRLEnv
 # from isaaclab.terrains import TerrainImporterCfg
@@ -50,6 +53,7 @@ from isaaclab.scene import InteractiveScene, InteractiveSceneCfg
 from isaaclab.sim import SimulationContext
 from isaaclab.utils import configclass
 from isaaclab.utils.types import ArticulationActions
+from isaacsim.core.utils.stage import get_current_stage
 
 ##
 # Pre-defined configs
