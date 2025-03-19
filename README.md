@@ -32,5 +32,8 @@ docker exec -it forklift-lab-ros2 bash
 ## 
 
 ## 2. Run a Custom Environment in Isaac Lab
+##    Revise version "forklift_empty_envs{version}.py"
+
+./isaaclab.sh -p /workspace/isaac_forklift/forklift_envs/assets/forklift_empty_envs.py
 
 ## Related Resources
