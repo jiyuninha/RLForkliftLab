@@ -13,6 +13,8 @@ import random
 import torch
 import gymnasium as gym
 
+gym.make()
+
 from isaaclab.sim import SimulationContext
 import isaaclab.sim as sim_utils
 from isaaclab.scene import InteractiveScene
@@ -90,7 +92,7 @@ def main():
     # 기본 학습 루프 실행
     train_agent(sim, scene, num_episodes=10, episode_length=1000)
     
-    # 학습 종료 후 추가 시뮬레이션 루프 (원하는 경우)
+    # 학습 종료 후 추가 시뮬레이션 루프
     while simulation_app.is_running():
         sim.step()
 

@@ -202,13 +202,13 @@ class ForkliftSceneCfg(InteractiveSceneCfg):
                 damping=10.0
             ),
         },
-        init_state=ArticulationCfg.InitialStateCfg(pos=(-2.0, 0.0, 0.0))
+        init_state=ArticulationCfg.InitialStateCfg(pos=(2.5, 0.0, 0.0))
     )
 
     pallet = AssetBaseCfg(
         prim_path="{ENV_REGEX_NS}/Pallet",
         spawn=sim_utils.UsdFileCfg(usd_path=PALLET_USD_PATH, scale=[0.01, 0.01, 0.01]),
-        init_state=AssetBaseCfg.InitialStateCfg(pos=(2.0,0.0,0.0)),
+        init_state=AssetBaseCfg.InitialStateCfg(pos=(-2.0,0.0,0.0)),
         debug_vis=True, # 충돌 시 해당 팔레트에 대해 디버그 시각화가 활성화
     )
 
