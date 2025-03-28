@@ -127,7 +127,7 @@ from pxr import PhysxSchema, Sdf, Usd, UsdGeom, Gf
 import random, math
 
 def quat_from_yaw():
-    y = random.uniform(-math.pi, math.pi)
+    y = random.uniform(-math.pi/2, math.pi/2) # -90 ~ 90 degree
     w = math.cos(y / 2)
     z = math.sin(y / 2)
     return Gf.Quatd(w, Gf.Vec3d(0, 0, z))
@@ -194,16 +194,16 @@ class ForkliftSceneCfg(InteractiveSceneCfg):
                 #class_type=ImplicitActuatorCfg,
                 joint_names_expr="|".join(STEER_JOINT),
                 effort_limit=100.0,
-                velocity_limit=10.0,
-                stiffness=0.0,
-                damping=0.0,
+                velocity_limit=6.0,
+                stiffness=8000.0,
+                damping=1000.0,
             ),
             "drive_actuator": ImplicitActuatorCfg(
-            joint_names_expr="|".join(DRIVE_JOINT),
-            velocity_limit=6,
-            effort_limit=12,
-            stiffness=100.0,
-            damping=4000.0,
+                joint_names_expr="|".join(DRIVE_JOINT),
+                velocity_limit=6,
+                effort_limit=12,
+                stiffness=100.0,
+                damping=4000.0,
             ),
             "passive_actuator": ImplicitActuatorCfg(
                 joint_names_expr="|".join(PASSIVE_JOINTS),
@@ -217,17 +217,17 @@ class ForkliftSceneCfg(InteractiveSceneCfg):
                 joint_names_expr="|".join(LIFT_JOINT),
                 effort_limit=200.0,
                 velocity_limit=5.0,
-                stiffness=100.0,
-                damping=4000.0
+                stiffness=8000.0,
+                damping=1000.0
             ),
         },
-        init_state=ArticulationCfg.InitialStateCfg(pos=(0.0, 0.0, 0.0))
+        init_state=ArticulationCfg.InitialStateCfg(pos=(4.0, 0.0, 0.0))
     )
 
     pallet = AssetBaseCfg(
         prim_path="{ENV_REGEX_NS}/Pallet",
         spawn=sim_utils.UsdFileCfg(usd_path=PALLET_USD_PATH, scale=[0.01, 0.01, 0.01]),
-        init_state=AssetBaseCfg.InitialStateCfg(pos=(-2.6,0.0,0.0),rot=(0.7071, 0.0, 0.0, 0.7071)), # axis-x rotation 90 degree
+        init_state=AssetBaseCfg.InitialStateCfg(pos=(0.0,0.0,0.0)), # axis-x rotation 90 degree ,rot=(0.7071, 0.0, 0.0, 0.7071)
         debug_vis=True, # 충돌 시 해당 팔레트에 대해 디버그 시각화가 활성화
     )
 
