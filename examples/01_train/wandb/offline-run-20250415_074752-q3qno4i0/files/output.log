@@ -1,0 +1,48 @@
+  0%|                                                                                                                                                              | 0/1000000 [00:00<?, ?it/s]joint_vel_target:  torch.Size([64, 1])
+target:  torch.Size([64, 6])
+joint_ids:  [6]
+  0%|                                                                                                                                                              | 0/1000000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/workspace/isaac_forklift/examples/01_train/train1.py", line 192, in <module>
+    train()
+  File "/workspace/isaac_forklift/examples/01_train/train1.py", line 185, in train
+    trainer.train()
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/trainers/torch/sequential.py", line 86, in train
+    self.single_agent_train()
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/trainers/torch/base.py", line 196, in single_agent_train
+    next_states, rewards, terminated, truncated, infos = self.env.step(actions)
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/envs/wrappers/torch/isaaclab_envs.py", line 62, in step
+    observations, reward, terminated, truncated, self._info = self._env.step(actions)
+  File "/workspace/isaaclab/_isaac_sim/exts/omni.isaac.ml_archive/pip_prebundle/gymnasium/wrappers/order_enforcing.py", line 56, in step
+    return self.env.step(action)
+  File "/workspace/isaac_forklift/forklift_envs/envs/local_navigation/entrypoints/forklift_env.py", line 69, in step
+    self.action_manager.apply_action()
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/managers/action_manager.py", line 348, in apply_action
+    term.apply_actions()
+  File "/workspace/isaac_forklift/forklift_envs/mdp/actions/ackermann_actions.py", line 96, in apply_actions
+    self._asset.set_joint_velocity_target(self._joint_vel, joint_ids=self._drive_joint_ids)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/assets/articulation/articulation.py", line 930, in set_joint_velocity_target
+    self._data.joint_vel_target[env_ids, joint_ids] = target
+RuntimeError: shape mismatch: value tensor of shape [64, 6] cannot be broadcast to indexing result of shape [64, 1]
+Traceback (most recent call last):
+  File "/workspace/isaac_forklift/examples/01_train/train1.py", line 192, in <module>
+    train()
+  File "/workspace/isaac_forklift/examples/01_train/train1.py", line 185, in train
+    trainer.train()
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/trainers/torch/sequential.py", line 86, in train
+    self.single_agent_train()
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/trainers/torch/base.py", line 196, in single_agent_train
+    next_states, rewards, terminated, truncated, infos = self.env.step(actions)
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/envs/wrappers/torch/isaaclab_envs.py", line 62, in step
+    observations, reward, terminated, truncated, self._info = self._env.step(actions)
+  File "/workspace/isaaclab/_isaac_sim/exts/omni.isaac.ml_archive/pip_prebundle/gymnasium/wrappers/order_enforcing.py", line 56, in step
+    return self.env.step(action)
+  File "/workspace/isaac_forklift/forklift_envs/envs/local_navigation/entrypoints/forklift_env.py", line 69, in step
+    self.action_manager.apply_action()
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/managers/action_manager.py", line 348, in apply_action
+    term.apply_actions()
+  File "/workspace/isaac_forklift/forklift_envs/mdp/actions/ackermann_actions.py", line 96, in apply_actions
+    self._asset.set_joint_velocity_target(self._joint_vel, joint_ids=self._drive_joint_ids)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/assets/articulation/articulation.py", line 930, in set_joint_velocity_target
+    self._data.joint_vel_target[env_ids, joint_ids] = target
+RuntimeError: shape mismatch: value tensor of shape [64, 6] cannot be broadcast to indexing result of shape [64, 1]

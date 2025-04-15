@@ -1,0 +1,24 @@
+2025-04-15 10:13:23,826 INFO    MainThread:1642649 [internal.py:wandb_internal():90] W&B internal server running at pid: 1642649, started at: 2025-04-15 10:13:23.826642
+2025-04-15 10:13:23,827 INFO    WriterThread:1642649 [datastore.py:open_for_write():75] open: /workspace/isaac_forklift/examples/01_train/wandb/offline-run-20250415_101323-tmquhf7q/run-tmquhf7q.wandb
+2025-04-15 10:13:23,827 DEBUG   HandlerThread:1642649 [handler.py:handle_request():140] handle_request: run_start
+2025-04-15 10:13:23,875 DEBUG   HandlerThread:1642649 [meta.py:__init__():35] meta init
+2025-04-15 10:13:23,875 DEBUG   HandlerThread:1642649 [meta.py:__init__():49] meta init done
+2025-04-15 10:13:23,875 DEBUG   HandlerThread:1642649 [meta.py:probe():209] probe
+2025-04-15 10:13:23,888 DEBUG   HandlerThread:1642649 [meta.py:_setup_git():199] setup git
+2025-04-15 10:13:23,896 DEBUG   HandlerThread:1642649 [meta.py:_setup_git():206] setup git done
+2025-04-15 10:13:23,896 DEBUG   HandlerThread:1642649 [meta.py:_save_pip():53] save pip
+2025-04-15 10:13:23,896 DEBUG   HandlerThread:1642649 [meta.py:_save_pip():67] save pip done
+2025-04-15 10:13:23,897 DEBUG   HandlerThread:1642649 [meta.py:probe():247] probe done
+2025-04-15 10:13:23,963 INFO    HandlerThread:1642649 [handler.py:handle_tbrecord():723] handling tbrecord: tbrecord {
+  log_dir: "/workspace/isaac_forklift/examples/01_train/logs/skrl/forklift/_test1_PPO"
+  save: true
+}
+
+2025-04-15 10:13:23,963 DEBUG   HandlerThread:1642649 [config_util.py:dict_from_config_file():100] no default config file found in config-defaults.yaml
+2025-04-15 10:13:26,515 WARNING MainThread:1642649 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2025-04-15 10:14:01,871 WARNING MainThread:1642649 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2025-04-15 10:14:01,871 ERROR   MainThread:1642649 [internal.py:wandb_internal():156] Internal process interrupted.
+2025-04-15 10:14:01,907 INFO    SenderThread:1642649 [sender.py:finish():1114] shutting down sender
+2025-04-15 10:14:02,000 INFO    WriterThread:1642649 [datastore.py:close():279] close: /workspace/isaac_forklift/examples/01_train/wandb/offline-run-20250415_101323-tmquhf7q/run-tmquhf7q.wandb
+2025-04-15 10:14:02,009 INFO    HandlerThread:1642649 [handler.py:finish():806] shutting down handler
+2025-04-15 10:14:07,969 INFO    MainThread:1642649 [internal.py:handle_exit():80] Internal process exited

@@ -1,0 +1,56 @@
+Traceback (most recent call last):
+  File "/workspace/isaac_forklift/examples/01_train/train1.py", line 192, in <module>
+    train()
+  File "/workspace/isaac_forklift/examples/01_train/train1.py", line 185, in train
+    trainer.train()
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/trainers/torch/sequential.py", line 86, in train
+    self.single_agent_train()
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/trainers/torch/base.py", line 182, in single_agent_train
+    states, infos = self.env.reset()
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/envs/wrappers/torch/isaaclab_envs.py", line 73, in reset
+    observations, self._info = self._env.reset()
+  File "/workspace/isaaclab/_isaac_sim/exts/omni.isaac.ml_archive/pip_prebundle/gymnasium/wrappers/order_enforcing.py", line 61, in reset
+    return self.env.reset(**kwargs)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/envs/manager_based_env.py", line 287, in reset
+    self._reset_idx(env_ids)
+  File "/workspace/isaac_forklift/forklift_envs/envs/local_navigation/entrypoints/forklift_env.py", line 38, in _reset_idx
+    super()._reset_idx(idx)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/envs/manager_based_rl_env.py", line 379, in _reset_idx
+    info = self.command_manager.reset(env_ids)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/managers/command_manager.py", line 353, in reset
+    metrics = term.reset(env_ids=env_ids)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/managers/command_manager.py", line 147, in reset
+    self._resample(env_ids)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/managers/command_manager.py", line 187, in _resample
+    self._resample_command(env_ids)
+  File "/workspace/isaac_forklift/forklift_envs/envs/local_navigation/utils/pallets/pallets_importer.py", line 96, in _resample_command
+    self.pos_command_w[env_ids] = self.terrain.sample_new_target(env_ids)
+AttributeError: 'NoneType' object has no attribute 'sample_new_target'
+Traceback (most recent call last):
+  File "/workspace/isaac_forklift/examples/01_train/train1.py", line 192, in <module>
+    train()
+  File "/workspace/isaac_forklift/examples/01_train/train1.py", line 185, in train
+    trainer.train()
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/trainers/torch/sequential.py", line 86, in train
+    self.single_agent_train()
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/trainers/torch/base.py", line 182, in single_agent_train
+    states, infos = self.env.reset()
+  File "/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/skrl/envs/wrappers/torch/isaaclab_envs.py", line 73, in reset
+    observations, self._info = self._env.reset()
+  File "/workspace/isaaclab/_isaac_sim/exts/omni.isaac.ml_archive/pip_prebundle/gymnasium/wrappers/order_enforcing.py", line 61, in reset
+    return self.env.reset(**kwargs)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/envs/manager_based_env.py", line 287, in reset
+    self._reset_idx(env_ids)
+  File "/workspace/isaac_forklift/forklift_envs/envs/local_navigation/entrypoints/forklift_env.py", line 38, in _reset_idx
+    super()._reset_idx(idx)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/envs/manager_based_rl_env.py", line 379, in _reset_idx
+    info = self.command_manager.reset(env_ids)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/managers/command_manager.py", line 353, in reset
+    metrics = term.reset(env_ids=env_ids)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/managers/command_manager.py", line 147, in reset
+    self._resample(env_ids)
+  File "/workspace/isaaclab/source/isaaclab/isaaclab/managers/command_manager.py", line 187, in _resample
+    self._resample_command(env_ids)
+  File "/workspace/isaac_forklift/forklift_envs/envs/local_navigation/utils/pallets/pallets_importer.py", line 96, in _resample_command
+    self.pos_command_w[env_ids] = self.terrain.sample_new_target(env_ids)
+AttributeError: 'NoneType' object has no attribute 'sample_new_target'

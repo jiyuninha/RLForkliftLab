@@ -1,0 +1,41 @@
+2025-04-15 08:04:29,034 INFO    MainThread:1552667 [wandb_setup.py:_flush():76] Configure stats pid to 1552667
+2025-04-15 08:04:29,035 INFO    MainThread:1552667 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2025-04-15 08:04:29,035 INFO    MainThread:1552667 [wandb_setup.py:_flush():76] Loading settings from /workspace/isaac_forklift/examples/01_train/wandb/settings
+2025-04-15 08:04:29,035 INFO    MainThread:1552667 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2025-04-15 08:04:29,035 INFO    MainThread:1552667 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'examples/01_train/train1.py', 'program': '/workspace/isaac_forklift/examples/01_train/train1.py'}
+2025-04-15 08:04:29,035 INFO    MainThread:1552667 [wandb_setup.py:_flush():76] Applying login settings: {'mode': 'offline'}
+2025-04-15 08:04:29,035 INFO    MainThread:1552667 [wandb_init.py:_log_setup():461] Logging user logs to /workspace/isaac_forklift/examples/01_train/wandb/offline-run-20250415_080429-hjfdy2q8/logs/debug.log
+2025-04-15 08:04:29,035 INFO    MainThread:1552667 [wandb_init.py:_log_setup():462] Logging internal logs to /workspace/isaac_forklift/examples/01_train/wandb/offline-run-20250415_080429-hjfdy2q8/logs/debug-internal.log
+2025-04-15 08:04:29,035 INFO    MainThread:1552667 [wandb_init.py:init():495] calling init triggers
+2025-04-15 08:04:29,036 INFO    MainThread:1552667 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {'rollouts': 60, 'learning_epochs': 4, 'mini_batches': 60, 'discount_factor': 0.99, 'lambda': 0.95, 'learning_rate': 0.0001, 'learning_rate_scheduler': None, 'learning_rate_scheduler_kwargs': {}, 'state_preprocessor': None, 'state_preprocessor_kwargs': {}, 'value_preprocessor': None, 'value_preprocessor_kwargs': {}, 'random_timesteps': 0, 'learning_starts': 0, 'grad_norm_clip': 0.5, 'ratio_clip': 0.2, 'value_clip': 0.2, 'clip_predicted_values': True, 'entropy_loss_scale': 0.0, 'value_loss_scale': 1.0, 'kl_threshold': 0.008, 'rewards_shaper': None, 'time_limit_bootstrap': False, 'mixed_precision': False, 'experiment': {'directory': '/workspace/isaac_forklift/examples/01_train/logs/skrl/forklift', 'experiment_name': '_test1_PPO', 'write_interval': 40, 'checkpoint_interval': 400, 'wandb': True}, 'timesteps': 1000000, 'headless': False, 'disable_progressbar': False, 'close_environment_at_exit': True, 'environment_info': 'episode', 'stochastic_evaluation': False, 'policy': {'mlp': ModuleList(
+  (0): Linear(in_features=5, out_features=256, bias=True)
+  (1): LeakyReLU(negative_slope=0.01, inplace=True)
+  (2): Linear(in_features=256, out_features=160, bias=True)
+  (3): LeakyReLU(negative_slope=0.01, inplace=True)
+  (4): Linear(in_features=160, out_features=128, bias=True)
+  (5): LeakyReLU(negative_slope=0.01, inplace=True)
+  (6): Linear(in_features=128, out_features=2, bias=True)
+  (7): Tanh()
+)}, 'value': {'mlp': ModuleList(
+  (0): Linear(in_features=5, out_features=256, bias=True)
+  (1): LeakyReLU(negative_slope=0.01, inplace=True)
+  (2): Linear(in_features=256, out_features=160, bias=True)
+  (3): LeakyReLU(negative_slope=0.01, inplace=True)
+  (4): Linear(in_features=160, out_features=128, bias=True)
+  (5): LeakyReLU(negative_slope=0.01, inplace=True)
+  (6): Linear(in_features=128, out_features=1, bias=True)
+)}}
+2025-04-15 08:04:29,036 INFO    MainThread:1552667 [wandb_init.py:init():548] starting backend
+2025-04-15 08:04:29,036 INFO    MainThread:1552667 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-04-15 08:04:29,044 INFO    MainThread:1552667 [backend.py:ensure_launched():217] starting backend process...
+2025-04-15 08:04:29,046 INFO    MainThread:1552667 [backend.py:ensure_launched():222] started backend process with pid: 1553387
+2025-04-15 08:04:29,046 INFO    MainThread:1552667 [wandb_init.py:init():558] backend started and connected
+2025-04-15 08:04:29,049 INFO    MainThread:1552667 [wandb_init.py:init():634] updated telemetry
+2025-04-15 08:04:29,057 INFO    MainThread:1552667 [wandb_init.py:init():700] starting run threads in backend
+2025-04-15 08:04:29,637 INFO    MainThread:1552667 [wandb_run.py:_console_start():1893] atexit reg
+2025-04-15 08:04:29,637 INFO    MainThread:1552667 [wandb_run.py:_redirect():1766] redirect: SettingsConsole.REDIRECT
+2025-04-15 08:04:29,637 INFO    MainThread:1552667 [wandb_run.py:_redirect():1771] Redirecting console.
+2025-04-15 08:04:29,638 INFO    MainThread:1552667 [wandb_run.py:_redirect():1827] Redirects installed.
+2025-04-15 08:04:29,638 INFO    MainThread:1552667 [wandb_init.py:init():732] run started, returning control to user process
+2025-04-15 08:04:29,638 INFO    MainThread:1552667 [wandb_run.py:_tensorboard_callback():1239] tensorboard callback: /workspace/isaac_forklift/examples/01_train/logs/skrl/forklift/_test1_PPO, True
