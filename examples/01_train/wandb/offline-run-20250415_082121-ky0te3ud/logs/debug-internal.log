@@ -1,0 +1,21 @@
+2025-04-15 08:21:22,369 INFO    MainThread:1566790 [internal.py:wandb_internal():90] W&B internal server running at pid: 1566790, started at: 2025-04-15 08:21:22.369072
+2025-04-15 08:21:22,369 DEBUG   HandlerThread:1566790 [handler.py:handle_request():140] handle_request: run_start
+2025-04-15 08:21:22,370 INFO    WriterThread:1566790 [datastore.py:open_for_write():75] open: /workspace/isaac_forklift/examples/01_train/wandb/offline-run-20250415_082121-ky0te3ud/run-ky0te3ud.wandb
+2025-04-15 08:21:22,419 DEBUG   HandlerThread:1566790 [meta.py:__init__():35] meta init
+2025-04-15 08:21:22,419 DEBUG   HandlerThread:1566790 [meta.py:__init__():49] meta init done
+2025-04-15 08:21:22,419 DEBUG   HandlerThread:1566790 [meta.py:probe():209] probe
+2025-04-15 08:21:22,430 DEBUG   HandlerThread:1566790 [meta.py:_setup_git():199] setup git
+2025-04-15 08:21:22,440 DEBUG   HandlerThread:1566790 [meta.py:_setup_git():206] setup git done
+2025-04-15 08:21:22,440 DEBUG   HandlerThread:1566790 [meta.py:_save_pip():53] save pip
+2025-04-15 08:21:22,441 DEBUG   HandlerThread:1566790 [meta.py:_save_pip():67] save pip done
+2025-04-15 08:21:22,441 DEBUG   HandlerThread:1566790 [meta.py:probe():247] probe done
+2025-04-15 08:21:22,497 INFO    HandlerThread:1566790 [handler.py:handle_tbrecord():723] handling tbrecord: tbrecord {
+  log_dir: "/workspace/isaac_forklift/examples/01_train/logs/skrl/forklift/_test1_PPO"
+  save: true
+}
+
+2025-04-15 08:21:22,497 DEBUG   HandlerThread:1566790 [config_util.py:dict_from_config_file():100] no default config file found in config-defaults.yaml
+2025-04-15 08:21:26,444 WARNING MainThread:1566790 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2025-04-15 08:21:29,702 WARNING MainThread:1566790 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2025-04-15 08:21:29,702 ERROR   MainThread:1566790 [internal.py:wandb_internal():156] Internal process interrupted.
+2025-04-15 08:21:30,087 INFO    MainThread:1566790 [internal.py:handle_exit():80] Internal process exited

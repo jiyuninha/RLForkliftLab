@@ -1,0 +1,48 @@
+2025-04-14 08:28:00,701 INFO    MainThread:677665 [internal.py:wandb_internal():90] W&B internal server running at pid: 677665, started at: 2025-04-14 08:28:00.701061
+2025-04-14 08:28:00,702 INFO    WriterThread:677665 [datastore.py:open_for_write():75] open: /workspace/isaac_forklift/examples/01_train/wandb/offline-run-20250414_082800-dahn2vlt/run-dahn2vlt.wandb
+2025-04-14 08:28:00,702 DEBUG   HandlerThread:677665 [handler.py:handle_request():140] handle_request: run_start
+2025-04-14 08:28:00,753 DEBUG   HandlerThread:677665 [meta.py:__init__():35] meta init
+2025-04-14 08:28:00,753 DEBUG   HandlerThread:677665 [meta.py:__init__():49] meta init done
+2025-04-14 08:28:00,753 DEBUG   HandlerThread:677665 [meta.py:probe():209] probe
+2025-04-14 08:28:00,763 DEBUG   HandlerThread:677665 [meta.py:_setup_git():199] setup git
+2025-04-14 08:28:00,769 DEBUG   HandlerThread:677665 [meta.py:_setup_git():206] setup git done
+2025-04-14 08:28:00,769 DEBUG   HandlerThread:677665 [meta.py:_save_pip():53] save pip
+2025-04-14 08:28:00,769 DEBUG   HandlerThread:677665 [meta.py:_save_pip():67] save pip done
+2025-04-14 08:28:00,770 DEBUG   HandlerThread:677665 [meta.py:probe():247] probe done
+2025-04-14 08:28:00,829 INFO    HandlerThread:677665 [handler.py:handle_tbrecord():723] handling tbrecord: tbrecord {
+  log_dir: "/workspace/isaac_forklift/examples/01_train/logs/skrl/forklift/_test1_PPO"
+  save: true
+}
+
+2025-04-14 08:28:00,829 DEBUG   HandlerThread:677665 [config_util.py:dict_from_config_file():100] no default config file found in config-defaults.yaml
+2025-04-14 08:28:03,384 DEBUG   SenderThread:677665 [sender.py:send():236] send: exit
+2025-04-14 08:28:03,384 DEBUG   HandlerThread:677665 [handler.py:handle_request():140] handle_request: poll_exit
+2025-04-14 08:28:03,384 INFO    SenderThread:677665 [sender.py:send_exit():372] handling exit code: 1
+2025-04-14 08:28:03,385 INFO    SenderThread:677665 [sender.py:send_exit():374] handling runtime: 2
+2025-04-14 08:28:03,385 INFO    SenderThread:677665 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2025-04-14 08:28:03,385 INFO    SenderThread:677665 [sender.py:send_exit():380] send defer
+2025-04-14 08:28:03,385 DEBUG   SenderThread:677665 [sender.py:send_request():250] send_request: poll_exit
+2025-04-14 08:28:03,385 DEBUG   HandlerThread:677665 [handler.py:handle_request():140] handle_request: defer
+2025-04-14 08:28:03,385 INFO    HandlerThread:677665 [handler.py:handle_request_defer():163] handle defer: 0
+2025-04-14 08:28:03,385 DEBUG   SenderThread:677665 [sender.py:send_request():250] send_request: defer
+2025-04-14 08:28:03,385 INFO    SenderThread:677665 [sender.py:send_request_defer():389] handle sender defer: 0
+2025-04-14 08:28:03,385 INFO    SenderThread:677665 [sender.py:transition_state():393] send defer: 1
+2025-04-14 08:28:03,385 DEBUG   HandlerThread:677665 [handler.py:handle_request():140] handle_request: defer
+2025-04-14 08:28:03,385 INFO    HandlerThread:677665 [handler.py:handle_request_defer():163] handle defer: 1
+2025-04-14 08:28:03,391 DEBUG   SenderThread:677665 [sender.py:send_request():250] send_request: defer
+2025-04-14 08:28:03,392 INFO    SenderThread:677665 [sender.py:send_request_defer():389] handle sender defer: 1
+2025-04-14 08:28:03,392 INFO    SenderThread:677665 [sender.py:transition_state():393] send defer: 2
+2025-04-14 08:28:03,392 DEBUG   HandlerThread:677665 [handler.py:handle_request():140] handle_request: defer
+2025-04-14 08:28:03,392 INFO    HandlerThread:677665 [handler.py:handle_request_defer():163] handle defer: 2
+2025-04-14 08:28:03,392 DEBUG   SenderThread:677665 [sender.py:send_request():250] send_request: defer
+2025-04-14 08:28:03,392 INFO    SenderThread:677665 [sender.py:send_request_defer():389] handle sender defer: 2
+2025-04-14 08:28:03,392 INFO    SenderThread:677665 [sender.py:transition_state():393] send defer: 3
+2025-04-14 08:28:03,392 DEBUG   HandlerThread:677665 [handler.py:handle_request():140] handle_request: defer
+2025-04-14 08:28:03,392 INFO    HandlerThread:677665 [handler.py:handle_request_defer():163] handle defer: 3
+2025-04-14 08:28:04,268 WARNING MainThread:677665 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2025-04-14 08:28:08,451 WARNING MainThread:677665 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2025-04-14 08:28:08,451 ERROR   MainThread:677665 [internal.py:wandb_internal():156] Internal process interrupted.
+2025-04-14 08:28:09,392 INFO    WriterThread:677665 [datastore.py:close():279] close: /workspace/isaac_forklift/examples/01_train/wandb/offline-run-20250414_082800-dahn2vlt/run-dahn2vlt.wandb
+2025-04-14 08:28:09,393 INFO    SenderThread:677665 [sender.py:finish():1114] shutting down sender
+2025-04-14 08:28:09,831 INFO    HandlerThread:677665 [handler.py:finish():806] shutting down handler
+2025-04-14 08:28:09,831 INFO    MainThread:677665 [internal.py:handle_exit():80] Internal process exited

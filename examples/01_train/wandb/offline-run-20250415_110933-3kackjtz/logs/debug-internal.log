@@ -1,0 +1,18 @@
+2025-04-15 11:09:33,648 INFO    MainThread:1681138 [internal.py:wandb_internal():90] W&B internal server running at pid: 1681138, started at: 2025-04-15 11:09:33.648134
+2025-04-15 11:09:33,649 DEBUG   HandlerThread:1681138 [handler.py:handle_request():140] handle_request: run_start
+2025-04-15 11:09:33,649 INFO    WriterThread:1681138 [datastore.py:open_for_write():75] open: /workspace/isaac_forklift/examples/01_train/wandb/offline-run-20250415_110933-3kackjtz/run-3kackjtz.wandb
+2025-04-15 11:09:33,699 DEBUG   HandlerThread:1681138 [meta.py:__init__():35] meta init
+2025-04-15 11:09:33,699 DEBUG   HandlerThread:1681138 [meta.py:__init__():49] meta init done
+2025-04-15 11:09:33,699 DEBUG   HandlerThread:1681138 [meta.py:probe():209] probe
+2025-04-15 11:09:33,712 DEBUG   HandlerThread:1681138 [meta.py:_setup_git():199] setup git
+2025-04-15 11:09:33,718 DEBUG   HandlerThread:1681138 [meta.py:_setup_git():206] setup git done
+2025-04-15 11:09:33,719 DEBUG   HandlerThread:1681138 [meta.py:_save_pip():53] save pip
+2025-04-15 11:09:33,719 DEBUG   HandlerThread:1681138 [meta.py:_save_pip():67] save pip done
+2025-04-15 11:09:33,719 DEBUG   HandlerThread:1681138 [meta.py:probe():247] probe done
+2025-04-15 11:09:33,783 INFO    HandlerThread:1681138 [handler.py:handle_tbrecord():723] handling tbrecord: tbrecord {
+  log_dir: "/workspace/isaac_forklift/examples/01_train/logs/skrl/forklift/_test1_PPO"
+  save: true
+}
+
+2025-04-15 11:09:33,783 DEBUG   HandlerThread:1681138 [config_util.py:dict_from_config_file():100] no default config file found in config-defaults.yaml
+2025-04-15 11:09:44,414 WARNING MainThread:1681138 [internal.py:wandb_internal():153] Internal process interrupt: 1
