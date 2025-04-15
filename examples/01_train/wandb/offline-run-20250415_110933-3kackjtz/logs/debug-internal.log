@@ -16,3 +16,9 @@
 
 2025-04-15 11:09:33,783 DEBUG   HandlerThread:1681138 [config_util.py:dict_from_config_file():100] no default config file found in config-defaults.yaml
 2025-04-15 11:09:44,414 WARNING MainThread:1681138 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2025-04-15 11:10:07,232 WARNING MainThread:1681138 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2025-04-15 11:10:07,232 ERROR   MainThread:1681138 [internal.py:wandb_internal():156] Internal process interrupted.
+2025-04-15 11:10:07,733 INFO    SenderThread:1681138 [sender.py:finish():1114] shutting down sender
+2025-04-15 11:10:07,812 INFO    WriterThread:1681138 [datastore.py:close():279] close: /workspace/isaac_forklift/examples/01_train/wandb/offline-run-20250415_110933-3kackjtz/run-3kackjtz.wandb
+2025-04-15 11:10:07,816 INFO    HandlerThread:1681138 [handler.py:finish():806] shutting down handler
+2025-04-15 11:10:13,813 INFO    MainThread:1681138 [internal.py:handle_exit():80] Internal process exited
