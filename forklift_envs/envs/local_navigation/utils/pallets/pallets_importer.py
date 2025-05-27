@@ -12,6 +12,8 @@ from isaacsim.core.prims import XFormPrim
 from isaaclab.markers import VisualizationMarkers
 from isaaclab.markers.visualization_markers import VisualizationMarkersCfg
 
+from omni.physx.scripts import utils
+import omni.kit.commands
 # Import Pallet Scene 
 
 
@@ -232,12 +234,18 @@ class TargetPalletCommand(CommandTerm):
                         #desc_prim.GetAttribute("xformOp:orient").Set('convexHull')'''
                 '''omni.kit.commands.execute("AddPhysicsComponentCommand",
                       usd_prim=pallet_prim,
-                      component="PhysicsRigidBodyAPI")
-                mesh_prim = self.stage.GetPrimAtPath(path+'/Pallet_A1')
+                      component="PhysicsRigidBodyAPI")'''
+                '''mesh_prim = self.stage.GetPrimAtPath(path+'/Pallet_A1')
                 omni.kit.commands.execute("AddPhysicsComponentCommand",
                     usd_prim=mesh_prim,
                     component="PhysicsCollisionAPI")
                 utils.setCollider(pallet_prim, approximationShape="sdf")'''
+                
+                mesh_prim = self.stage.GetPrimAtPath(path+'/Pallet_A1')
+                mesh_prim.GetAttribute("physics:approximation").Set("sdf")
+                #utils.setCollider(mesh_prim, approximationShape='sdf')
+                
+                
 
                 # 랜덤 위치 생성
                 rand_x = random.uniform(-3.0, 3.0)

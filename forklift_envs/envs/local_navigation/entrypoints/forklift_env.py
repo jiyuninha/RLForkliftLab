@@ -111,7 +111,9 @@ class ForkliftEnv(ManagerBasedRLEnv):
             body_force = torch.norm(body, dim=-1).squeeze(-1)
 
             contact_envs = torch.nonzero((lift_force > 0) | (body_force > 0), as_tuple=False).squeeze(-1)
-
+            
+            contact_ids = ""
+            
             if contact_envs.numel() > 0:
                 contact_ids = ", ".join(str(i.item()) for i in contact_envs)
                 tqdm.write(f"[SENSOR] 접촉된 환경: {contact_ids}")
