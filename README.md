@@ -1,7 +1,7 @@
 # RLForkliftLab
 
 **RLForkliftLab** is an **Isaac Lab / Isaac Sim**–based **reinforcement learning (RL)** environment for **forklifts**, with example **ROS 2 Humble** integration.  
-Keywords: RLForkliftLab, RL Forklift Lab, Isaac Lab, Isaac Sim, ROS 2, forklift, PPO, SAC, navigation.
+Keywords: RLForkliftLab, Isaac Lab, Isaac Sim, ROS 2, forklift, PPO, navigation.
 
 <p align="left">
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue"></a>
