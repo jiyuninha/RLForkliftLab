@@ -49,7 +49,7 @@ cd docker
 # 4) Build & start (in the background)
 docker compose up forklift-lab-base -d --build --remove-orphans
 docker compose up forklift-lab-ros2 -d --build --remove-orphans
-bash```
+```
 
 1. Set environment
 ![[Check] RL Env](figure/test2.png)
