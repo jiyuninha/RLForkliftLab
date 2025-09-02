@@ -44,15 +44,16 @@ cd RLForkliftLab
 
 # 3) Go to the Docker directory
 
+cd docker
+
+# 4) Build & start (in the background)
+docker compose up forklift-lab-base -d --build --remove-orphans
+docker compose up forklift-lab-ros2 -d --build --remove-orphans
+bash```
+
 1. Set environment
 ![[Check] RL Env](figure/test2.png)
 2. Check articulation operation
 ![[Check] Forklift articulation](figure/test6.gif)
 3. Set train code
 ![[Check] Train pipeline](figure/test9.gif)
-
-cd docker
-
-# 4) Build & start (in the background)
-docker compose up forklift-lab-base -d --build --remove-orphans
-docker compose up forklift-lab-ros2 -d --build --remove-orphans
