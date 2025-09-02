@@ -1,6 +1,6 @@
 # RLForkliftLab: RL-Based Navigation for Forklifts in Isaac Lab
 
-**RLForkliftLab** is an **Isaac Lab / Isaac Sim**–based **reinforcement learning (RL)** environment for **forklifts**, with example **ROS 2 Humble** integration.  
+**RLForkliftLab** is an **Isaac Lab / Isaac Sim**–based **reinforcement learning (RL)** environment for **forklifts**.  
 Keywords: RLForkliftLab, Isaac Lab, Isaac Sim, ROS 2, forklift, PPO, navigation.
 
 <p align="left">
