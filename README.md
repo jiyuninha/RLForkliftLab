@@ -8,6 +8,12 @@ Keywords: RLForkliftLab, Isaac Lab, Isaac Sim, ROS 2, forklift, PPO, navigation.
   <img alt="Ubuntu" src="https://img.shields.io/badge/Ubuntu-22.04-important">
   <img alt="ROS 2" src="https://img.shields.io/badge/ROS%202-Humble-blueviolet">
   <img alt="GPU" src="https://img.shields.io/badge/NVIDIA-GPU%20required-lightgrey">
+    <a href="https://github.com/NVIDIA-Omniverse/IsaacLab">
+    <img alt="IsaacLab" src="https://img.shields.io/badge/IsaacLab-2.1.0-brightgreen">
+  </a>
+  <a href="https://developer.nvidia.com/isaac-sim">
+    <img alt="IsaacSim" src="https://img.shields.io/badge/IsaacSim-4.5.0-brightgreen">
+  </a>
 </p>
 
 ## Features
