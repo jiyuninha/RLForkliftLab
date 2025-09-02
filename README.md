@@ -1,39 +1,46 @@
 # RLForkliftLab
 
-## Description
+**RLForkliftLab** is an **Isaac Lab / Isaac Sim**–based **reinforcement learning (RL)** environment for **forklifts**, with example **ROS 2 Humble** integration.  
+Keywords: RLForkliftLab, RL Forklift Lab, Isaac Lab, Isaac Sim, ROS 2, forklift, PPO, SAC, navigation.
+
+<p align="left">
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue"></a>
+  <img alt="Ubuntu" src="https://img.shields.io/badge/Ubuntu-22.04-important">
+  <img alt="ROS 2" src="https://img.shields.io/badge/ROS%202-Humble-blueviolet">
+  <img alt="GPU" src="https://img.shields.io/badge/NVIDIA-GPU%20required-lightgrey">
+</p>
+
+## Features
+- Forklift kinematics/steering model and Isaac Lab **task** template
+- **ROS 2** interface (e.g., `/cmd_vel`) and Docker-based runtime environment
+- Example **training/eval** scripts and a custom **env** (PPO/SAC-ready)
+- Quick demo launcher (`isaaclab.sh -p ...`)
+
+---
+
+## Prerequisites
+- **Ubuntu 22.04**, **ROS 2 Humble**
+- **Docker**, **Docker Compose v2**
+- **NVIDIA Container Toolkit** (GPU required)
+- (Recommended) **NVIDIA Driver 535+**
+
+> When using GPU with GUI, you may need to configure X permissions/display settings.
+
+---
 
 ## Installation
 
 ```bash
-git clone https://github.com/jiyuninha/RLForkliftLab_.git
-cd /home/{$USER}/RLForklift/docker
-docker-compose up forklift-lab-base --detach --build --remove-orphans
-docker-compose up forklift-lab-ros2 --detach --build --remove-orphans
+# 1) Clone
+git clone https://github.com/jiyuninha/RLForkliftLab.git
+cd RLForkliftLab
 
-# Enter the container.
-docker exec -it forklift-lab-ros2 bash
-```
+# 2) (Optional) If the project uses submodules
+# git submodule update --init --recursive
 
-## Prerequisites
+# 3) Go to the Docker directory
+cd docker
 
-1. **Ubuntu 22.04 & ROS Humble**
-2. **Docker**
-3. **NVIDIA-Docker toolkit**
-4. **Docker Compose**
-
-## Run
-
-```bash
-cd /home/{$USER}/RLForklift/docker
-
-## 1. Enter the container.
-docker exec -it forklift-lab-ros2 bash
-
-## 
-
-## 2. Run a Custom Environment in Isaac Lab
-##    Revise version "forklift_empty_envs{version}.py"
-
-./isaaclab.sh -p /workspace/isaac_forklift/forklift_envs/assets/forklift_empty_envs.py
-
-## Related Resources
+# 4) Build & start (in the background)
+docker compose up forklift-lab-base -d --build --remove-orphans
+docker compose up forklift-lab-ros2 -d --build --remove-orphans
