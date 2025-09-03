@@ -32,25 +32,6 @@ Keywords: RLForkliftLab, Isaac Lab, Isaac Sim, ROS 2, forklift, PPO, navigation.
 
 ---
 
-## Installation
-
-```bash
-# 1) Clone
-git clone https://github.com/jiyuninha/RLForkliftLab.git
-cd RLForkliftLab
-
-# 2) (Optional) If the project uses submodules
-# git submodule update --init --recursive
-
-# 3) Go to the Docker directory
-
-cd docker
-
-# 4) Build & start (in the background)
-docker compose up forklift-lab-base -d --build --remove-orphans
-docker compose up forklift-lab-ros2 -d --build --remove-orphans
-```
-
 1. Set environment
 ![[Check] RL Env](figure/test2.png)
 2. Check articulation operation
